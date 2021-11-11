@@ -7,8 +7,7 @@ namespace CalculatorLibrary
 {
     public class Calculator
     {
-
-        JsonWriter writer;
+        private JsonWriter writer;
 
         public Calculator()
         {
@@ -52,9 +51,14 @@ namespace CalculatorLibrary
                         result = num1 / num2;
                         writer.WriteValue("Divide");
                     }
+                    else
+                    {
+                        writer.WriteValue("Divide by 0");
+                    }
                     break;
                 // Return text for an incorrect option entry.
                 default:
+                    writer.WriteValue("Invalid operator");
                     break;
             }
             writer.WritePropertyName("Result");

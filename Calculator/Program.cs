@@ -3,9 +3,9 @@ using CalculatorLibrary;
 
 namespace CalculatorProgram
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             bool endApp = false;
             // Display title as the C# console calculator app.
@@ -21,24 +21,24 @@ namespace CalculatorProgram
                 double result = 0;
 
                 // Ask the user to type the first number.
-                Console.Write("Type a number, and then press Enter: ");
+                Console.WriteLine("Type a number, and then press Enter: ");
                 numInput1 = Console.ReadLine();
 
                 double cleanNum1 = 0;
                 while (!double.TryParse(numInput1, out cleanNum1))
                 {
-                    Console.Write("This is not valid input. Please enter an integer value: ");
+                    Console.WriteLine("This is not valid input. Please enter an integer value: ");
                     numInput1 = Console.ReadLine();
                 }
 
                 // Ask the user to type the second number.
-                Console.Write("Type another number, and then press Enter: ");
+                Console.WriteLine("Type another number, and then press Enter: ");
                 numInput2 = Console.ReadLine();
 
                 double cleanNum2 = 0;
                 while (!double.TryParse(numInput2, out cleanNum2))
                 {
-                    Console.Write("This is not valid input. Please enter an integer value: ");
+                    Console.WriteLine("This is not valid input. Please enter an integer value: ");
                     numInput2 = Console.ReadLine();
                 }
 
