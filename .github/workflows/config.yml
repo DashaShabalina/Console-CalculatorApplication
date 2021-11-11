@@ -24,7 +24,7 @@ jobs:
       - uses: codecov/codecov-action@v1
         with:
           token: 94b3c975-9f59-40e3-9b72-91320b5644fb
-          files: ./test/CalculatorLibraryTests/TestResults/coverage.cobertura.xml ./test/Calculator.Tests/TestResults/coverage.cobertura.xml
+          files: ./test/CalculatorLibraryTests/TestResults/coverage.opencover.xml ./test/Calculator.Tests/TestResults/coverage.opencover.xml
           flags: unittests 
           name: codecov-umbrella
           fail_ci_if_error: true 
