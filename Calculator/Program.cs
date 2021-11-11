@@ -10,7 +10,7 @@ namespace CalculatorProgram
             bool endApp = false;
             // Display title as the C# console calculator app.
             Console.WriteLine("Console Calculator in C#\r");
-            Console.WriteLine("------------------------\n");
+            Console.WriteLine("------------------------");
 
             Calculator calculator = new Calculator();
             while (!endApp)
@@ -66,7 +66,7 @@ namespace CalculatorProgram
                     Console.WriteLine("Oh no! An exception occurred trying to do the math.\n - Details: " + e.Message);
                 }
 
-                Console.WriteLine("------------------------\n");
+                Console.WriteLine("------------------------");
 
                 // Wait for the user to respond before closing.
                 Console.Write("Press 'n' and Enter to close the app, or press any other key and Enter to continue: ");
