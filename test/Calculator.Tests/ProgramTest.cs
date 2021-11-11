@@ -22,7 +22,7 @@ namespace Calculator.Tests
 
             CalculatorProgram.Program.Main(new string[] { });
 
-            var expectedResult = new string[15]
+            var expectedResult = new string[14]
             {
                 "Console Calculator in C#",
                 "------------------------",
@@ -38,7 +38,6 @@ namespace Calculator.Tests
                 "Your option? Your result: 8",
                 "------------------------",
                 "Press 'n' and Enter to close the app, or press any other key and Enter to continue: ",
-                ""
             };
 
             var result = output.ToString().Split(Environment.NewLine);
