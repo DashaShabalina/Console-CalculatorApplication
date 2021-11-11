@@ -20,6 +20,12 @@ jobs:
       - name: Build
         run: dotnet build --no-restore
       - name: Test
-        run: dotnet test --no-build --verbosity normal --collect:"XPlat Code Coverage"
-      - name: Codecov upload
-        uses: codecov/codecov-action@v2
+        run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=TestResults/
+      - uses: codecov/codecov-action@v1
+        with:
+          token: 94b3c975-9f59-40e3-9b72-91320b5644fb
+          files: ./test/Calculator.Tests/TestResults/coverage.opencover.xml ./test/CalculatorLibraryTests/TestResults/coverage.opencover.xml
+          flags: unittests 
+          name: codecov-umbrella
+          fail_ci_if_error: true 
+          verbose: true
