@@ -37,7 +37,7 @@ namespace Calculator.Tests
                 "d - Divide",
                 "Your option? Your result: 8",
                 "------------------------",
-                "Press 'n' and Enter to close the app, or press any other key and Enter to continue: ",
+                "Press 'n' and Enter to close the app, or press any other key and Enter to continue: "
             };
 
             var result = output.ToString().Split(Environment.NewLine);
