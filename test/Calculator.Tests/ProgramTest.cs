@@ -41,9 +41,11 @@ namespace Calculator.Tests
             };
 
             var result = output.ToString().Split(Environment.NewLine);
+            Console.Writeline("");
             for (int i = 0; i < result.Length; i++)
             {
                 result[i] = Regex.Replace(result[i], @"[\r\t\n]+", string.Empty);
+                Console.Writeline(result[i]);
             }
             //Assert.Equal(expectedResult, result);
         }
